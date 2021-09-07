@@ -1,9 +1,9 @@
 {
   "homepage": ".",
-  "homepage": "https://VihanR.github.io/VihanR.github.io",
+  "homepage": "https://vihanr.github.io/vihanr.github.io",
   "name": "VihanR.github.io",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "basename": "/",
   "dependencies": {
     "@babel/core": "7.4.3",
