@@ -1,6 +1,6 @@
 {
+  "homepage": ".",
   "homepage": "https://VihanR.github.io/VihanR.github.io",
-  "proxy": "http://localhost:5000",
   "name": "VihanR.github.io",
   "version": "0.1.0",
   "private": true,
