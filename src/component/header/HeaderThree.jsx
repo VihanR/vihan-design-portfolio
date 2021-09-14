@@ -73,15 +73,15 @@ class HeaderThree extends Component{
                         <nav className="mainmenunav d-lg-block ml--50">
                             <Scrollspy className="mainmenu" items={['home','about','projects','play']} currentClassName="is-current" offset={-200}>
                             <ul className="mainmenu">
-                                <li className="has-"><Link to="/portfolio-landing">Home</Link></li>
+                                <li className="has-"><Link to="/">Home</Link></li>
                                 <li><Link to="/about" >About</Link></li>
-                                <li className="has-droupdown"><Link to="/portfolio-main" >Projects</Link>
+                                <li className="has-droupdown"><Link to="/projects" >Work</Link>
                                     <ul className="submenu">
-                                        <li><Link to="/portfolio-details">Project Dreamtime</Link></li>
-                                        <li><Link to="/portfolio">Project CyberInk</Link></li>
+                                        <li><Link to="/project-dreamtime">Project Dreamtime</Link></li>
+                                        <li><Link to="/project-cyberink">Project CyberInk</Link></li>
                                     </ul>
                                 </li>
-                                <li><Link to="/gallery" >Play</Link></li>
+                                <li><Link to="/play" >Play</Link></li>
                             </ul>
                             </Scrollspy>
                         </nav>
@@ -90,7 +90,7 @@ class HeaderThree extends Component{
                         <div className="social-share-inner d-none d-sm-block">
                             <ul className="social-share social-style--2 color-black d-flex justify-content-start liststyle">
                                 {SocialShare.map((val , i) => (
-                                    <li key={i}><a href={`${val.link}`}>{val.Social}</a></li>
+                                    <li key={i}><a href={`${val.link}`}target="_blank">{val.Social}</a></li>
                                 ))}
                             </ul>
                         </div>

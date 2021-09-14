@@ -42,10 +42,10 @@ class Footer extends Component{
                                     <div className="footer-link">
                                         <h4>Quick Link</h4>
                                         <ul className="ft-link">
-                                            <li><Link to="/portfolio-landing">Home</Link></li>
+                                            <li><Link to="/">Home</Link></li>
                                             <li><Link to="/about">About</Link></li>
-                                            <li><Link to="/portfolio-main">Work</Link></li>
-                                            <li><Link to="/gallery">Play</Link></li>
+                                            <li><Link to="/projects">Work</Link></li>
+                                            <li><Link to="/play">Play</Link></li>
                                         </ul>
                                     </div>
                                 </div>

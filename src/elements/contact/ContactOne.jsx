@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import emailjs from 'emailjs-com';
+import ContactForm from "../../blocks/ContactForm";
+import { name } from "file-loader";
 
 class ContactOne extends Component{
     constructor(props){
@@ -10,7 +13,25 @@ class ContactOne extends Component{
             rnMessage: '',
         };
     }
+
     render(){
+
+        function sendEmail(e) {
+            e.preventDefault();
+
+            emailjs.sendForm('service_93y44vz', 'template_0d9kqgf', e.target, 'user_Pu43TJ7rva0lDkZfooSFY')
+              .then((result) => {
+                  console.log(result.text);
+              }, (error) => {
+                  console.log(error.text);
+              });
+
+              e.target["name"].value = [];
+              e.target["email"].value = [];
+              e.target["subject"].value = [];
+              e.target["message"].value = [];
+        }
+
         return(
             <div className="contact-form--1">
                 <div className="container">
@@ -31,7 +52,7 @@ class ContactOne extends Component{
                                 </div>
                             </div>
                             <div className="form-wrapper">
-                                <form>
+                                <form className = "contact-form" onSubmit={sendEmail}>
                                     <label htmlFor="item01">
                                         <input
                                             type="text"

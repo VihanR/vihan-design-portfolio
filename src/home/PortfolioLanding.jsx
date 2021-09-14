@@ -7,7 +7,7 @@ import Footer from "../component/footer/Footer";
 import TabTwo from "../elements/tab/TabTwo";
 import ContactOne from "../elements/contact/ContactOne";
 import ServiceList from "../elements/service/ServiceList";
-import Helmet from "../component/common/Helmet";
+import PageHelmet from '../component/common/Helmet';
 
 const SlideList = [
     {
@@ -25,7 +25,7 @@ const PortfolioLanding = () => {
         description = 'During my time in the workforce and at university, I’ve been exposed to all facets of product development, from building databases to designing the interface of web and mobile applications.  I’m seeking to apply my design and leadership skills to build impactful products, whether that be as a Product Manager, Product Designer or UI/UX Designer.';
     return (
         <div>
-            <Helmet pageTitle="Portfolio Landing" />
+            <PageHelmet pageTitle='Home' />
             <HeaderThree homeLink="/" logo="symbol-dark" color="color-black"/>
             {/* Start Slider Area   */}
             <div id="home" className="fix">
@@ -35,7 +35,7 @@ const PortfolioLanding = () => {
                         <div className="slide personal-portfolio-slider slider-paralax slider-style-3 d-flex align-items-center justify-content-center bg_image bg_image--34" key={index}>
                             <div className="container">
                                 <div className="row">
-                                    <div className="col-lg-12">
+                                    <div style = {{textAlign:'start'}} className="col-lg-12 text-left">
                                         <div className={`inner ${value.textPosition}`}>
                                             {value.category ? <span className="theme-color font-700">{value.category}</span> : ''}
                                             {value.title ? <h1 className="title theme-gradient" dangerouslySetInnerHTML={{__html: value.title}}></h1> : ''}
